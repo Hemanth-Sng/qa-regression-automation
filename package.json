@@ -1,1 +1,17 @@
 
+{
+  "name": "qa-regression-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QA Regression Testing using Playwright and GitHub Actions",
+  "scripts": {
+    "test": "playwright test",
+    "smoke": "playwright test tests/smoke.spec.js",
+    "regression": "playwright test tests/",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}
+
