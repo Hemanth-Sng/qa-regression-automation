@@ -26,6 +26,8 @@ test('TC-009: Complete purchase workflow', async ({ page }) => {
 
 test('TC-010: Verify logout functionality', async ({ page }) => {
   await page.goto('/');
+  await page.getByTestId('open-menu').click();
+  await page.getByTestId('logout-sidebar-link').click();
 
   await page.getByTestId('user-name').fill('standard_user');
   await page.getByTestId('password').fill('secret_sauce');
