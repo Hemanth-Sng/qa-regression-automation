@@ -21,18 +21,16 @@ module.exports = defineConfig({
   ],
 
   use: {
-    baseURL: 'https://www.saucedemo.com',
+  baseURL: 'https://www.saucedemo.com',
 
-    ...devices['Desktop Chrome'],
+  testIdAttribute: 'data-test',
 
-    headless: true,
+  ...devices['Desktop Chrome'],
 
-    screenshot: 'only-on-failure',
-
-    video: 'retain-on-failure',
-
-    trace: 'retain-on-failure',
-    testIdAttribute: 'data-test'
-  }
+  headless: true,
+  screenshot: 'only-on-failure',
+  video: 'retain-on-failure',
+  trace: 'retain-on-failure'
+}
 });
 
