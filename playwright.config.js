@@ -31,7 +31,8 @@ module.exports = defineConfig({
 
     video: 'retain-on-failure',
 
-    trace: 'retain-on-failure'
+    trace: 'retain-on-failure',
+    testIdAttribute: 'data-test'
   }
 });
 
