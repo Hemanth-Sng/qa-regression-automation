@@ -15,7 +15,7 @@ test('TC-002: Login with valid credentials', async ({ page }) => {
 test('TC-003: Login with invalid credentials', async ({ page }) => {
   await page.goto('/');
 
-  await page.getByTestId('user-name').fill('wrong_user');
+  await page.getByTestId('username').fill('wrong_user');
   await page.getByTestId('password').fill('wrong_password');
   await page.getByTestId('login-button').click();
 
@@ -26,7 +26,7 @@ test('TC-003: Login with invalid credentials', async ({ page }) => {
 test('TC-004: Verify locked user login', async ({ page }) => {
   await page.goto('/');
 
-  await page.getByTestId('user-name').fill('locked_out_user');
+  await page.getByTestId('username').fill('locked_out_user');
   await page.getByTestId('password').fill('secret_sauce');
   await page.getByTestId('login-button').click();
 
