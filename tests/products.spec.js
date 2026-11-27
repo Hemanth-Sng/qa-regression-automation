@@ -14,6 +14,8 @@ test('TC-005: Verify product listing', async ({ page }) => {
 });
 
 test('TC-006: Verify product price sorting', async ({ page }) => {
+  await page.getByTestId('username').fill('standard_user');
+  await page.getByTestId('password').fill('secret_sauce');
   await page.getByTestId('product-sort-container').selectOption('lohi');
 
   const firstProduct = page.locator('.inventory_item_price').first();
