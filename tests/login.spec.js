@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 test('TC-002: Login with valid credentials', async ({ page }) => {
   await page.goto('/');
 
-  await page.getByTestId('user-name').fill('standard_user');
+  await page.getByTestId('username').fill('standard_user');
   await page.getByTestId('password').fill('secret_sauce');
   await page.getByTestId('login-button').click();
 
